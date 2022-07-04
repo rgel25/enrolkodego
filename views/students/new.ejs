@@ -1,0 +1,48 @@
+<%- layout('layout/boilerplate') %>
+<div class="row">
+  <div class="col-6 offset-3">
+    <h1 class="text-center mb-5">Add New Student</h1>
+    <form method="POST" action="/students">
+      <div class="row">
+        <div class="col-6 mb-3">
+          <label for="first_name" class="form-label">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="first_name"
+            name="first_name"
+          />
+        </div>
+        <div class="col-6 mb-3">
+          <label for="last_name" class="form-label">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="last_name"
+            name="last_name"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" />
+      </div>
+      <div class="mb-3">
+        <label for="course" class="form-label">Course</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          name="course_id"
+          id="course"
+        >
+          <option selected>Select Course</option>
+          <option value="1">Full Stack Development</option>
+          <option value="2">Front End Development</option>
+          <option value="3">Back End Development</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="/students" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+</div>
