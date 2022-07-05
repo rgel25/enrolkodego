@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = 3000;
 const mysql = require("mysql2");
 const path = require("path");
 const ejsMate = require("ejs-mate");
@@ -10,7 +10,7 @@ const methodOverride = require("method-override");
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "enteryourpassword",
+  password: "enterpassword",
   database: "enrolkodego",
 });
 
@@ -109,7 +109,6 @@ app.get("/students/:id/edit", (req, res) => {
     if (err) {
       console.log(err.message);
     } else {
-      //   console.log(results);
       return res.render(`students/edit`, { student: results[0] });
     }
   });
